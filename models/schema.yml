@@ -1,0 +1,74 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: gz_raw_data
+    description: Dataset BigQuery contenant 3 tableaux
+
+    tables:
+      - name: product
+        identifier: raw_gz_product
+        description: "following exercices on le Wagon"
+
+        columns:
+          - name: products_id
+            description: "The primary key for this table"
+            tests: -unique
+
+          - name: purchSE_PRICE
+            description: ""
+
+      - name: sales
+        identifier: raw_gz_sales
+        description: "following exercices on le Wagon"
+        columns:
+          - name: orders_id
+            description: ""
+            tests:
+              - not_null
+
+          - name: pdt_id
+            description: ""
+            tests:
+              - not_null
+
+          - name: revenue
+            description: ""
+            tests:
+              - not_null
+
+          - name: quantity
+            description: ""
+            tests:
+              - not_null
+
+      - name: ship
+        identifier: raw_gz_ship
+        description: "following exercices on le Wagon"
+
+        columns:
+          - name: orders_id
+            description: ""
+            tests:
+              - unique
+              - not_null
+
+          - name: shipping_fee
+            description: ""
+            tests:
+              - not_null
+
+          - name: shipping_fee_1
+            description: ""
+            tests:
+              - not_null
+
+          - name: logCost
+            description: ""
+            tests:
+              - not_null
+
+          - name: ship_cost
+            description: ""
+            tests:
+              - not_null
