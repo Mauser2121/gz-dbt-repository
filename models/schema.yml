@@ -21,10 +21,7 @@ sources:
       - name: sales
         identifier: raw_gz_sales
         description: "following exercices on le Wagon"
-        tests:
-          - unique:
-              column_name: '(orders_id || "_" || pdt_id)'
-              
+
         columns:
           - name: orders_id
             description: ""
@@ -45,7 +42,10 @@ sources:
             description: ""
             tests:
               - not_null
-
+      - tests:
+              - unique:
+                  column_name: '(orders_id || "_" || pdt_  - :
+                    
       - name: ship
         identifier: raw_gz_ship
         description: "following exercices on le Wagon"
