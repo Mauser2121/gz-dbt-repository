@@ -42,10 +42,11 @@ sources:
             description: ""
             tests:
               - not_null
-      - tests:
-              - unique:
-                  column_name: '(orders_id || "_" || pdt_  - :
-                    
+
+          tests:
+            - unique:
+                column_name: '(orders_id || "_" || pdt_id)'
+                
       - name: ship
         identifier: raw_gz_ship
         description: "following exercices on le Wagon"
