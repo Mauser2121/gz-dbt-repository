@@ -4,12 +4,12 @@ sources:
   - name: raw
     schema: gz_raw_data
     description: Dataset BigQuery contenant 3 tableaux
-
+  
     tables:
       - name: product
         identifier: raw_gz_product
         description: "following exercices on le Wagon"
-
+      
         columns:
           - name: products_id
             description: "The primary key for this table"
@@ -21,6 +21,10 @@ sources:
       - name: sales
         identifier: raw_gz_sales
         description: "following exercices on le Wagon"
+        tests:
+          - unique:
+              column_name: '(orders_id || "_" || pdt_id)'
+              
         columns:
           - name: orders_id
             description: ""
