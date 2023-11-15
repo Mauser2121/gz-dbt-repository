@@ -12,6 +12,6 @@ select
     round(sum(cast(ship_cost as float64)), 0) as ship_cost,
     sum(quantity) as quantity
 
-from dbt_mauser2121.int_orders_operational
+from {{ ref('int_orders_operational') }}
 group by date_date
 order by date_date desc
