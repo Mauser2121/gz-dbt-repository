@@ -46,4 +46,4 @@ models:
     marts:
       finance:
         + materialized: table
-        schema: dbt_mauser2121
+        schema: 
