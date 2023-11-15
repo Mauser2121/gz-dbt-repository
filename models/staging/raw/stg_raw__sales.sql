@@ -11,8 +11,7 @@ renamed as (
     select
         date_date,
         orders_id,
-        Concat(orders_id, "_", pdt_id) as key,
-        pdt_id as product_id,
+        pdt_id as products_id,
         revenue,
         quantity
 

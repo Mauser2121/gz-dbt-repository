@@ -3,7 +3,7 @@ with
 source as (
 
     select * from {{ source('raw', 'product') }}
-
+ 
 ),
 
 renamed as (
